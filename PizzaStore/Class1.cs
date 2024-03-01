@@ -1,19 +1,25 @@
-﻿namespace PizzaStore
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PizzaStore
 {
-    public class Pizza
+    public class Topping
     {
         #region Instance field
+
         private string _name;
         private int _price;
-        
 
         #endregion
 
         #region constroctor 
-        public Pizza(string name, int price) 
+        public Topping(string name, int price)
         {
-            _name = name;
-            _price = price; 
+           _name = name;
+            _price = price;
         }
 
         #endregion
@@ -26,18 +32,21 @@
             private set { _name = value; }
         }
 
-
         public int Price
         {
             get { return _price; }
             private set { _price = value; }
         }
-
         #endregion
 
-        public override string ToString() 
+        public override string ToString()
         {
-            return $"Pizza: {Name}, Price: {Price} kr.";
+            return $"Extra topping: {Name}, Price: {Price} kr.";
+            
         }
     }
+
+
+
 }
+

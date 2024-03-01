@@ -17,7 +17,7 @@ namespace PizzaStore
         #region constroctor 
         public Customer(string name) 
         {
-            Name = name;
+            _name = name;
         }
 
         #endregion
@@ -27,7 +27,7 @@ namespace PizzaStore
         public string Name
         {
             get { return _name; }
-            set { _name = value; }
+            private set { _name = value; }
         }
 
         #endregion
