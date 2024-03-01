@@ -30,13 +30,14 @@ namespace PizzaStore
 
         public void Start()
         {
-            Pizza pizza1 = new Pizza("Vegetarian", 80);
-            Pizza pizza2 = new Pizza("Gorgonzola", 85);
-            Pizza pizza3 = new Pizza("Contadina", 75);
 
             Topping topping1 = new Topping("cheese", 5);
             Topping topping2 = new Topping("mushrooms", 10);
             Topping topping3 = new Topping("anchovies", 15);
+
+            Pizza pizza1 = new Pizza("Vegetarian", 80);
+            Pizza pizza2 = new Pizza("Gorgonzola", 85);
+            Pizza pizza3 = new Pizza("Contadina", 75);
 
             Customer customer1 = new Customer("Lars Larsen");
             Customer customer2 = new Customer("Kim Larsen");
