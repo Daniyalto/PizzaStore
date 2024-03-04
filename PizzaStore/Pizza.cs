@@ -5,15 +5,18 @@
         #region Instance field
         private string _name;
         private int _price;
-        
+        private Topping _topping;
+     
 
         #endregion
 
         #region constroctor 
-        public Pizza(string name, int price) 
+        public Pizza(string name, int price, Topping topping) 
         {
             _name = name;
-            _price = price; 
+            _price = price;
+            _topping = topping;
+            
         }
 
         #endregion
@@ -33,11 +36,17 @@
             private set { _price = value; }
         }
 
+        public Topping Topping
+        {
+            get { return _topping; }
+            private set { _topping = value; }
+        }
+
         #endregion
 
-        public override string ToString() 
+        public override string ToString()
         {
-            return $"Pizza: {Name}, Price: {Price} kr.";
+            return $"Pizza: {Name}, Price: {Price} kr., Extra topping: {Topping.Name}, Price: {Topping.Price} kr.";
         }
     }
 }

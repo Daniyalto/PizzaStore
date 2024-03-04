@@ -14,18 +14,16 @@ namespace PizzaStore
        private int _deliveryFee;
        private Customer _customer;
        private Pizza _pizza;
-        private Topping _topping;
-
+       
         #endregion
 
         #region constroctor 
-        public Order(Pizza pizza, Topping topping, Customer customer) 
+        public Order(Pizza pizza, Customer customer) 
         {
             _pizza = pizza;
             _customer = customer;
-            _topping = topping;
-            _tax = 0.25;
-            _deliveryFee = 40;
+            _tax = 0.25; // Based on 25% moms in Denmark. 
+            _deliveryFee = 40; 
               
         }
         #endregion
@@ -45,12 +43,6 @@ namespace PizzaStore
             private set { _customer = value; }
         }
 
-        public Topping Topping
-        {
-            get { return _topping; }
-            private set { _topping = value; }
-        }
-
 
         public double Tax 
         { 
@@ -66,14 +58,16 @@ namespace PizzaStore
 
         public double CalculateTotalPrice()
         {
-            return Pizza.Price + Topping.Price + ((Pizza.Price + Topping.Price) * Tax) + DeliveryFee;
-        
+            double pizzaAndToppingPrice = Pizza.Price + Pizza.Topping.Price;
+            double totalPrice = pizzaAndToppingPrice + (pizzaAndToppingPrice * Tax) + DeliveryFee;
+            return totalPrice;
+
         }
         #endregion
 
         public override string ToString()
         {
-            return $"{Customer.ToString()}, {Pizza.ToString()}, {Topping.ToString()} Total Price: {CalculateTotalPrice()} kr.";
+            return $"{Customer.ToString()}, {Pizza.ToString()}, Total Price: {CalculateTotalPrice()} kr.";
         }
     }
 }

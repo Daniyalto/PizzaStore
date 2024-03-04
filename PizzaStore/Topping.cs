@@ -19,7 +19,7 @@ namespace PizzaStore
         public Topping(string name, int price)
         {
            _name = name;
-            _price = price;
+           _price = price;
         }
 
         #endregion
@@ -37,13 +37,12 @@ namespace PizzaStore
             get { return _price; }
             private set { _price = value; }
         }
+
+        
+
         #endregion
 
-        public override string ToString()
-        {
-            return $"Extra topping: {Name}, Price: {Price} kr.";
-            
-        }
+      
     }
 
 
