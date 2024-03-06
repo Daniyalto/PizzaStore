@@ -41,8 +41,8 @@ namespace PizzaStore
             Pizza pizza3 = new Pizza("Contadina", 75, anchovies);
 
             //Creating three different customers each with a given name.
-            Customer customer1 = new Customer("Lars Larsen");
-            Customer customer2 = new Customer("Kim Larsen");
+            Customer customer1 = new Customer("David Larsen");
+            Customer customer2 = new Customer("John Larsen");
             Customer customer3 = new Customer("Tom Larsen");
 
             //Creating three different orders.
@@ -50,7 +50,7 @@ namespace PizzaStore
             Order order2 = new Order(pizza2, customer2);
             Order order3 = new Order(pizza3, customer3);
             
-            //The three different orders are printed out on the console using the ToString method which is incoporated in the Order class.
+            //The three different orders are printed out on the console using the ToString method.
             Console.WriteLine(order1);
             Console.WriteLine(order2);
             Console.WriteLine(order3);

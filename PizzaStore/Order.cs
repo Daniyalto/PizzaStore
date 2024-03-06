@@ -22,7 +22,7 @@ namespace PizzaStore
         {
             _pizza = pizza;
             _customer = customer;
-            _tax = 0.25; // Based on 25% moms in Denmark. 
+            _tax = 0.25; // Based on 25% moms/tax in Denmark. 
             _deliveryFee = 40; 
               
         }
