@@ -67,7 +67,7 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"{Customer.ToString()}, {Pizza.ToString()}, Total Price: {CalculateTotalPrice()} kr.";
+            return $"{Customer.ToString()}, {Pizza.ToString()}, Total Price: {CalculateTotalPrice()} kr";
         }
     }
 }
